@@ -146,3 +146,11 @@ for i in range(2, num):
 
 	first = second
 	second = next
+
+#Python Program to Check Palindrome or Not
+------------------------------------------
+my_string=input("Enter string:")
+if(my_string==my_string[::-1]):
+   print("The string is a palindrome")
+else:
+   print("The string isn't a palindrome")
