@@ -1,16 +1,29 @@
 #input from user and create the list of the prime number with in mentioned upperlimit 
 ----------------------------------------------------------------------------------------------------------------------
 upper=int(input("Enter the number"))
+for n in range(0,upper+1):
+	if n>1:
+		for i in range(2,n):
+			if(n%i)==0:
+				break
+			else:
+				print(n)
+				break
+
+#2nd type
+------------
+upper=int(input("Enter the number"))
 a=[2]
 for n in range(0,upper+1):
 	if n>1:
 		for i in range(2,n):
-			if(n%i)!=0:
+			if(n%i)==0:
 				a.append(n)
+				print(a)
 				break
 			else:
-				print("prime is",upper)
-				print(*a)
+				break
+				
 
 
 #program for leap year
@@ -182,3 +195,14 @@ print("concatination are: ",l+m)
 x=(10,20,10,10,30,40,50)
 a=x.count(10)
 print(a)
+
+#suitcase weight
+----------------
+a=int(input("enter a value"))
+
+if(a>=30):
+        print(a,"suitecase weight is equal to 30kg")
+elif(~-a):
+        print(a,"suitcase is added extra kilos")
+else:
+        print("default value")
