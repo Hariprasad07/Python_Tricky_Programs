@@ -198,6 +198,16 @@ print(a)
 
 #suitcase weight
 ----------------
+weight=int(input("Enter the weight of luggage"))
+if weight>30:
+   total=weight-30
+   charge=total*100
+   print("the total amount to be paid for the luggage is",charge)
+else:
+   print("no amount to be paid for the luggage")
+   
+2nd type:
+---------
 a=int(input("enter a value"))
 
 if(a>=30):
