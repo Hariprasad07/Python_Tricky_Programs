@@ -248,3 +248,28 @@ def smart_div(func):
 div = smart_div(div)
 
 div(2,4)
+
+---------------------------------------------------------
+python script to withdraw money from an ATM machine. 
+If user exceeds the withdrawal amount morethan the 
+available balance then raise insuffucient fund/balance error
+
+x=input("enter if you want to with draw amt y/n: ")
+if(x=="y"):
+	try:    
+		bal=int(input("Enter the amount"))
+		while True:
+			print("\n1 - View Balance \t 2 - Withdraw \t 3 - Exit ")
+			sel = int(input("\nEnter your selection: "))
+			if(sel==1):
+				print(bal)
+			elif(sel==2):
+				wd_amt=int(input("Enter the amount to withdraw"))
+				amt=bal-wd_amt
+				print("your balance is: ",amt)
+			elif(sel==3):
+				exit()
+	except:
+		print("Thanks for choosing us as your bank")  
+else:
+	print("Good Bye")
