@@ -285,3 +285,37 @@ if(x=="y"):
 		print("Thanks for choosing us as your bank")  
 else:
 	print("Good Bye")
+
+-----------
+2nd type:
+-----------
+bal=10000
+def atm(x,y):
+  return x-y
+a=float(input("enter the amount to withdraw"))
+if a>bal:
+    try:
+        raise("not posbl")
+    except:
+        print("balance is low")
+else:
+    print("ts!!!! and balnce rem is ",atm(bal,a))
+    bal=bal-a
+    while bal != 0:
+        ques=input("do you wanna withdraw? y/n")
+        
+        if ques == 'y':
+            am=float(input("enter the amount to withdraw"))
+            
+            
+            if am>bal:
+                try:
+                    raise("not posbl")
+                except:
+                    print("balance is low")
+            else:
+                print(" balnce rem is ",atm(bal,am))
+                
+                bal=bal-am
+        else:
+            print("ty")
