@@ -310,7 +310,7 @@ else:
     bal=bal-a
     while bal != 0:
         ques=input("do you wanna withdraw? y/n")
-        
+        exit()
         if ques == 'y':
             am=float(input("enter the amount to withdraw"))
             
@@ -406,8 +406,8 @@ print(r4(10,3))
 #----------
 #print the string twice
 li=['a','b','c']
-l=list(map (x*x,li))
-print(l)
+l=map(lambda x:x+x,li)
+print(list(l))
 
 -----------
 l=[30,50,70,20,23]
