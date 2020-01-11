@@ -319,3 +319,96 @@ else:
                 bal=bal-am
         else:
             print("ty")
+
+-----------------
+#Guess a number and raise exception
+class error(Exception):
+	pass
+class valueTooHigh(error):
+	pass
+class valueTooLow(error):
+	pass
+
+number=10
+	
+while True:
+	num_i=int(input("Enter the number"))
+	try:
+		if(num_i<number):
+			raise valueTooLow("value is low")
+		elif(num_i>number):
+			raise valueTooHigh("value is high")
+		else:
+			print("entered number is",num_i)
+			exit()
+	except(valueTooLow):
+		print("low")
+	except(valueTooHigh):
+		print("high")
+print("you have gathered the correct number")
+
+----------------
+#example for zerodivision error
+x=10
+y=0
+try:
+	if(y==0):
+		raise ZeroDivisionError("Denominator cannot be zero")
+		z=x/y
+		print(z)
+except:
+	print("please enter a non-zero number")
+
+#multiplicative inverse
+a=['li',0,2]
+for i in a:
+	try:
+		print("the entry is",i)
+		r=1/i
+		break
+	except:
+		print("an error has accured")
+		print("Next entry")
+print("reciprocal",r)
+
+------------------
+#cube of a number 
+r=(lambda x: x*x*x) (10)
+print(r)
+
+#largest of 2 numbers
+r1=(lambda a,b: a if(a>b) else b) (10,20)
+print(r1)
+
+#fractional number using lambda
+a=5
+r2=lambda a:1 if(a==0) else a * r2(a-1)
+print(r2(a))
+
+#-----------
+#number which is not devisible by 2 
+li=[10,2,3,6,9,11,15]
+r3=filter(lambda x:x%2!=0,li)
+print(list(r3))
+
+#-----------
+#a to the power of b
+r4=lambda a,b: a**b
+print(r4(10,3))
+
+#----------
+#print the string twice
+li=['a','b','c']
+l=list(map (x*x,li))
+print(l)
+
+-----------
+l=[30,50,70,20,23]
+result=list(filter(lambda a:a>=33,l))
+
+a=result
+if a==l:
+	print("pass")        
+else:
+	print("fail",len(a))
+			
