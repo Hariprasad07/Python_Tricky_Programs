@@ -248,6 +248,18 @@ def smart_div(func):
 div = smart_div(div)
 
 div(2,4)
+---------------------------------------------------------
+python program to check student is passed in all subject r not 
+and the min pass marks is 33 
+-----
+l=[30,50,70,20,23]
+result=list(filter(lambda a:a>=33,l))
+
+a=result
+if a==l:
+	print("pass")        
+else:
+	print("fail",len(a))
 
 ---------------------------------------------------------
 python script to withdraw money from an ATM machine. 
