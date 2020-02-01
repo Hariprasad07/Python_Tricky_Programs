@@ -418,4 +418,29 @@ if a==l:
 	print("pass")        
 else:
 	print("fail",len(a))
-			
+---------------------------------------------			
+class Account:
+	
+	def __init__(self,acc,n,b,interest):
+		self.an=acc
+		self.na=n
+		self.balance=b
+		self.inte=interest
+
+	
+	def displaydetails(self):
+		print("the Account number is:",self.an)
+		print("the Account holder name is:",self.na)
+		print("the Account balance is:",self.balance)
+		print("the Interest is:",self.inte)
+
+n=int(input("Enter the number: "))
+for i in range(n):
+	accno=int(input("Enter the Account number"))
+	nm=input("Enter the Account holder name")
+	bal=int(input("Enter the Account balance"))
+	i=(bal*3.5)/100
+
+ac=Account(accno,nm,bal,i)  
+ac.displaydetails()
+
