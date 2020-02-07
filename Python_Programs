@@ -418,7 +418,10 @@ if a==l:
 	print("pass")        
 else:
 	print("fail",len(a))
----------------------------------------------			
+---------------------------------------------	
+class example
+---------------------------------------------
+
 class Account:
 	
 	def __init__(self,acc,n,b,interest):
@@ -444,3 +447,37 @@ for i in range(n):
 ac=Account(accno,nm,bal,i)  
 ac.displaydetails()
 
+---------------------------
+Inheritance Example
+=========================
+---------------------
+#simple example1
+---------------------
+class base:
+	def __init__(self,fname):
+		self.fn=fname
+		
+class derived(base):
+	pass
+
+obj=base("Hari")
+
+print(obj.fn)
+------------------
+#simple example2
+------------------
+class base:
+	def __init__(self,fname,lname):
+		self.fn=fname
+		self.lstn=lname
+		self.m=fname+ '.' + lname + '@email.com'
+
+class derived(base):
+	pass
+
+obj=base("Hari","Prasad")
+obj=derived("Harish","kumar")
+
+print(obj.fn)
+print(obj.lstn)
+print(obj.m)
