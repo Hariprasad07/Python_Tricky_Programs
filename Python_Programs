@@ -327,8 +327,9 @@ else:
         else:
             print("ty")
 
------------------
-#Guess a number and raise exception
+------------------------------------------------
+#Guess a number and raise exception/custom error
+------------------------------------------------
 class error(Exception):
 	pass
 class valueTooHigh(error):
@@ -354,8 +355,9 @@ while True:
 		print("high")
 print("you have gathered the correct number")
 
-----------------
+-------------------------------
 #example for zerodivision error
+-------------------------------
 x=10
 y=0
 try:
@@ -365,8 +367,9 @@ try:
 		print(z)
 except:
 	print("please enter a non-zero number")
-
+------------------------
 #multiplicative inverse
+-------------------------
 a=['li',0,2]
 for i in a:
 	try:
@@ -380,31 +383,37 @@ print("reciprocal",r)
 
 ------------------
 #cube of a number 
+------------------
 r=(lambda x: x*x*x) (10)
 print(r)
-
+-----------------------
 #largest of 2 numbers
+----------------------
 r1=(lambda a,b: a if(a>b) else b) (10,20)
 print(r1)
-
+-------------------------------
 #fractional number using lambda
+-------------------------------
 a=5
 r2=lambda a:1 if(a==0) else a * r2(a-1)
 print(r2(a))
 
-#-----------
-#number which is not devisible by 2 
+#----------------------------------
+#number which is not devisible by 2
+-----------------------------------
 li=[10,2,3,6,9,11,15]
 r3=filter(lambda x:x%2!=0,li)
 print(list(r3))
 
-#-----------
+#--------------------
 #a to the power of b
+---------------------
 r4=lambda a,b: a**b
 print(r4(10,3))
 
-#----------
+#----------------------
 #print the string twice
+-----------------------
 li=['a','b','c']
 l=map(lambda x:x+x,li)
 print(list(l))
