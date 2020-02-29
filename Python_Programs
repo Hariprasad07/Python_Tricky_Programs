@@ -421,7 +421,26 @@ else:
 ---------------------------------------------	
 class example
 ---------------------------------------------
+--------
+sample1
+--------
 
+x=5
+print(type(x))
+
+#------------------
+
+class test:
+	i=5
+
+	def func():
+		print("hello")
+print(test.i)
+test.func()
+
+------------
+samplle2
+------------
 class Account:
 	
 	def __init__(self,acc,n,b,interest):
@@ -481,3 +500,76 @@ obj=derived("Harish","kumar")
 print(obj.fn)
 print(obj.lstn)
 print(obj.m)
+
+------------------
+#simple example3
+------------------
+
+class student:
+	def __init__(self,n,a):
+		self.na=n
+		self.ag=a
+	def displayname(self):
+		print("the name is: ",self.na)
+	def displayage(self):
+		print("the name is: ",self.ag)
+class subclass(student):
+	def __init__(self,n,a,r,m):
+		student.__init__(self,n,a)
+		self.r=r
+		self.m=m
+	def displayroll(self):
+		print("the roll no is: ",self.r)
+	def displaymarks(self):
+		print("the marks of: ",self.m)
+
+
+s=subclass("adfa",16,100,55)
+s.displayroll()
+s.displayname()
+s.displayage()
+s.displaymarks()
+
+------------------
+#simple example4
+------------------
+
+class student:
+	def __init__(self,n,a):
+		self.na=n
+		self.ag=a
+	def displayname(self):
+		print("the name is: ",self.na)
+	def displayage(self):
+		print("the age is: ",self.ag)
+class subclass(student):
+	def __init__(self,n,a,r,m):
+		student.__init__(self,n,a)
+		self.r=r
+		self.m=m
+	def displayroll(self):
+		print("the roll no is: ",self.r)
+	def displaymarks(self):
+		print("the marks of: ",self.m)
+for s in range(0,5):
+	s=subclass(input("enter the name"),
+		   int(input("enter the age")),
+		   int(input("enter the rollno")),
+		   int(input("enter the marks")))
+	s.displayroll()
+	s.displayname()
+	s.displayage()
+	s.displaymarks()
+
+------------------
+#global variable
+------------------
+y=20 #global variable
+print("the value of y outside",y)
+
+def f1():
+	global y
+	y=10
+	print("local variable: ",y)
+f1()
+print("global variable",y)	
